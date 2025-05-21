@@ -19,6 +19,7 @@ h1 {
   font-family: "Playwrite AU SA";
   padding: 5px;
   margin: 20px 10px;
+  font-size: 30px;
 }
 hr {
   color: rgba(140, 28, 19, 0.3);
@@ -32,14 +33,14 @@ li {
 p.temperature-now {
   font-family: "Playwrite AU SA";
   font-weight: bold;
-  font-size: 30px;
+  font-size: 27px;
   color: #772e25;
 }
 p.temperature-now {
   display: flex;
   position: relative;
   justify-content: flex-end;
-  top: -150px;
+  top: -142px;
   right: 10px;
 }
 p.current-date {
@@ -92,8 +93,8 @@ a {
   margin: 0px 0px -100px 0px;
 }
 .material-symbols-outlined.main {
-  font-size: 45px;
-  padding: 5px 10px 0px 5px;
+  font-size: 40px;
+  padding: 8px 10px 0px 5px;
 }
 .material-symbols-outlined {
   font-size: 25px;
