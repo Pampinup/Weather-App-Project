@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stylish Weather App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Header section -->
         <form id="search-form">
           <input
             type="search"
@@ -20,6 +22,26 @@
         </form>
         <hr />
       </header>
+      <main>
+        <div class="current-weather">
+          <h1>Paris</h1>
+          <p class="current-date">
+            <strong><span class="today"></span></strong>,<span
+              class="condition-description"
+            >
+              moderate rain</span
+            >
+            <br />
+            Humidity: <strong><span class="humidity">87%</span></strong
+            >, Wind: <strong><span class="wind">7.2km/h</span></strong>
+          </p>
+          <p class="temperature-now">
+            <span class="material-symbols-outlined main"> sunny </span
+            ><span class="current-temperature"> 14°C</span>
+          </p>
+        </div>
+      </main>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
