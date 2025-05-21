@@ -34,3 +34,18 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
 // Current time code:
+let now = new Date();
+let today = document.querySelector(".today");
+let hour = now.getHours();
+let mins = now.getMinutes();
+let week = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = week[now.getDay()];
+today.innerHTML = `${day} ${hour}:${mins < 10 ? "0" + mins : mins}`;
