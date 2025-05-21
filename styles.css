@@ -17,8 +17,8 @@ body {
 h1 {
   color: #772e25;
   font-family: "Playwrite AU SA";
-  padding: 10px;
-  margin: 20px 30px;
+  padding: 5px;
+  margin: 20px 10px;
 }
 hr {
   color: rgba(140, 28, 19, 0.3);
@@ -93,7 +93,7 @@ a {
 }
 .material-symbols-outlined.main {
   font-size: 45px;
-  padding: 5px;
+  padding: 5px 10px 0px 5px;
 }
 .material-symbols-outlined {
   font-size: 25px;
