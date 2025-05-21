@@ -26,10 +26,13 @@ function displayWeather(response) {
     icon = "cloud";
   } else if (
     description.toLowerCase().includes("sunny") ||
-    description.toLowerCase().includes("clear")) {
+    description.toLowerCase().includes("clear")
+  ) {
     icon = "wb_sunny";
   } else if (description.toLowerCase().includes("snow")) {
     icon = "mode_cool";
+  } else if (description.toLowerCase().includes("storm")) {
+    icon = "thunderstorm";
   }
 
   if (weatherIcon) {
