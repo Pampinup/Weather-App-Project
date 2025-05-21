@@ -33,6 +33,11 @@ function displayWeather(response) {
     icon = "mode_cool";
   } else if (description.toLowerCase().includes("storm")) {
     icon = "thunderstorm";
+  } else if (
+    description.toLowerCase().includes("mist") ||
+    description.toLowerCase().includes("foggy")
+  ) {
+    icon = "foggy";
   }
 
   if (weatherIcon) {
