@@ -10,7 +10,7 @@ body {
   /*background-color: #d6cdc9;*/
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: overlay;
 }
 
@@ -49,11 +49,12 @@ p.current-date {
 }
 form input {
   font-family: "Courier New", Courier, monospace;
-  background-color: #d6cdc8;
+  background-color: rgba(227, 222, 208, 0.4);
   border: none;
   border-radius: 4px;
-  padding: 15px 145px 15px 10px;
+  padding: 15px 115px 15px 10px;
   margin: 10px auto;
+  font-size: 15px;
 }
 button {
   background-color: #772e25;
@@ -82,6 +83,8 @@ a {
   text-align: justify;
   padding: 20px;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: overlay;
   margin: 50px auto;
   max-width: 400px;
 }
