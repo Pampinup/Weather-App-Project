@@ -16,6 +16,25 @@ function displayWeather(response) {
   let description = response.data.condition.description;
   let displayDescription = document.querySelector(".condition-description");
   displayDescription.innerHTML = `${description}`;
+
+  let weatherIcon = document.querySelector(".material-symbols-outlined");
+  let icon = "wb_sunny"; // default
+
+  if (description.toLowerCase().includes("rain")) {
+    icon = "umbrella"; // Use a valid Material Symbols icon for rain
+  } else if (description.toLowerCase().includes("cloud")) {
+    icon = "cloud";
+  } else if (
+    description.toLowerCase().includes("sunny") ||
+    description.toLowerCase().includes("clear")) {
+    icon = "wb_sunny";
+  } else if (description.toLowerCase().includes("snow")) {
+    icon = "mode_cool";
+  }
+
+  if (weatherIcon) {
+    weatherIcon.innerHTML = icon;
+  }
 }
 
 // Search city code:
