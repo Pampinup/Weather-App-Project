@@ -40,7 +40,7 @@ p.temperature-now {
   display: flex;
   position: relative;
   justify-content: flex-end;
-  top: -142px;
+  top: -150px;
   right: 10px;
 }
 p.current-date {
@@ -69,6 +69,7 @@ p.coded-by {
   font-family: "Courier New", Courier, monospace;
   color: #8a7269;
   margin: 10px;
+  font-size: 11px;
 }
 strong {
   color: #772e25;
@@ -91,6 +92,10 @@ a {
 }
 .current-weather {
   margin: 0px 0px -100px 0px;
+}
+.current-date {
+  text-align: left;
+  padding: 0px 0px 10px 0px;
 }
 .material-symbols-outlined.main {
   font-size: 40px;
