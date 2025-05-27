@@ -7,7 +7,6 @@
 body {
   display: block;
   margin: 0 auto;
-  /*background-color: #d6cdc9;*/
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.1);
@@ -65,6 +64,9 @@ button {
   border-radius: 4px;
   font-family: "Courier New", Courier, monospace;
 }
+button:hover {
+  cursor: pointer;
+}
 p.coded-by {
   font-family: "Courier New", Courier, monospace;
   color: #8a7269;
@@ -75,19 +77,64 @@ strong {
   color: #772e25;
   font-weight: bolder;
 }
-a {
+.foot-link {
   color: #bf4342;
+}
+#menu-button {
+  margin: 5px auto;
+  padding: 1px;
+  display: flex;
+  position: relative;
+  top: 35px;
+  right: 30px;
+}
+#menu-button:hover {
+  cursor: pointer;
+}
+.material-symbols-outlined.button {
+  font-size: 20px;
+}
+.logo {
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 100px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: 400px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: rgba(255, 255, 255, 0.3);
+  list-style: none;
+  margin: 45px 10px 10px 10px;
+  box-shadow: #8a7269 0px 0px 10px;
+  border-radius: 5px;
+  padding: 8px 16px;
+  min-width: 100px;
+}
+.menu {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  font-size: 15px;
+  color: #772e25;
+  line-height: 1.7;
 }
 .container {
   display: block;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(167, 138, 127, 0.9);
+  box-shadow: 1px 10px 10px rgba(167, 138, 127, 0.9);
   text-align: justify;
   padding: 20px;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   background-blend-mode: overlay;
-  margin: 50px auto;
+  margin: 0px auto;
   max-width: 400px;
 }
 .current-weather {

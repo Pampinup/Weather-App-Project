@@ -15,9 +15,31 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
+    <div class="menu">
+      <div>
+        <img
+          class="logo"
+          alt="Joice Ortega"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/732/original/ChatGPT_Image_May_21__2025__07_59_45_PM.png?1748345503"
+        />
+      </div>
+      <div>
+        <button id="menu-button">
+          <span class="material-symbols-outlined button"> menu </span>
+          <ul class="dropdown-menu">
+            <li><a class="menu about-me" href="#info">About me</a></li>
+            <li>
+              <a class="menu photo-gallery" href="gindex.html" target="_blank"
+                >Gallery</a
+              >
+            </li>
+          </ul>
+        </button>
+      </div>
+    </div>
     <div class="container">
       <!-- Searching input section -->
       <header>
@@ -83,21 +105,31 @@
       <footer>
         <p class="coded-by">
           This project was coded by
-          <a href="https://github.com/Pampinup" target="_blank">Joice</a> and is
-          on
           <a
+            class="foot-link"
+            href="https://github.com/Pampinup"
+            target="_blank"
+            >Joice</a
+          >
+          and is on
+          <a
+            class="foot-link"
             href="https://github.com/Pampinup/Weather-App-Project"
             target="_blank"
           >
             GitHub</a
           >
           and hosted on
-          <a href="https://dapper-gumdrop-ea35d0.netlify.app/" target="_blank">
+          <a
+            class="foot-link"
+            href="https://dapper-gumdrop-ea35d0.netlify.app/"
+            target="_blank"
+          >
             Netlify</a
           >
         </p>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>

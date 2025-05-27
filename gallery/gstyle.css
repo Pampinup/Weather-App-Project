@@ -1,0 +1,289 @@
+.playwrite-au-sa {
+  font-family: "Playwrite AU SA", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
+  background-size: cover;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: overlay;
+}
+h1 {
+  text-align: center;
+  font-family: "Playwrite AU SA";
+  font-weight: 500;
+  font-size: 48px;
+  font-style: italic;
+}
+h2 {
+  text-align: center;
+  font-family: "times new roman", sans-serif;
+  font-size: 24px;
+  border-radius: 4px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 100%;
+  transition: ease-in-out 1s;
+  height: auto;
+  object-fit: cover;
+}
+footer {
+  text-align: center;
+  margin: 50px 0;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "times new roman", sans-serif;
+  font-size: 18px;
+  transition: ease-in-out 300ms;
+}
+
+.button-theme {
+  display: block;
+  margin: 0 auto;
+  margin: 35px 0px 15px -70px;
+  padding: 10px 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: ease-in-out 500ms;
+  color: #772e25;
+  border-color: #772e25;
+}
+
+.button-theme:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button-theme.dark {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #efe9d3;
+  box-shadow: #a28d74 0px 0px 10px 0px;
+  border: none;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: 600px;
+  min-width: 300px;
+}
+.logo {
+  display: block;
+  margin: 5px auto;
+  width: 100px;
+  height: 100px;
+}
+#menu-button {
+  padding: 0px;
+  background-color: transparent;
+  margin: 0px 0px 5px 0px;
+  display: flex;
+  position: relative;
+  top: 30px;
+  right: 20px;
+  border: none;
+}
+#menu-button:hover {
+  cursor: pointer;
+}
+.material-symbols-outlined.button {
+  font-size: 20px;
+  background-color: #772e25;
+  color: #efe9d3;
+  padding: 8px;
+  border: none;
+  border-color: transparent;
+  border-radius: 4px;
+  margin: 10px;
+}
+.dropdown-menu {
+  box-shadow: #8a7269 0px 0px 10px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  list-style: none;
+  margin: 50px 10px 10px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  min-width: 200px;
+}
+a.menu-list {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  font-size: 18px;
+  color: #772e25;
+  text-align: left;
+  padding: 5px 25px;
+}
+a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.theme {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
+  background-size: cover;
+}
+.theme.dark {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/684/original/lena-polishko-knm_6itR-Ug-unsplash.jpg?1744236539");
+  background-size: cover;
+}
+.container {
+  max-width: 600px;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: #a28d74 0px 0px 10px 0px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container.dark {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/684/original/lena-polishko-knm_6itR-Ug-unsplash.jpg?1744236539");
+  background-size: cover;
+  box-shadow: #a28d74 0px 0px 10px 0px;
+}
+.title {
+  text-align: center;
+  color: #772e25;
+  font-family: "Times New Roman", Times, serif;
+  margin: 50px 50px 50px 50px;
+  display: block;
+  background-color: rgba(199, 199, 192, 0.4);
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+.title.dark {
+  background-color: rgba(31, 53, 33, 0.5);
+  color: #a28d74;
+}
+.p-quote {
+  font-size: 20px;
+}
+.text {
+  text-align: justify;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: "times new roman", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #866d64;
+}
+.text.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #d1ccb8;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin: 15px 0;
+}
+.grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.main-photo {
+  filter: contrast(95%);
+  transition: transform ease-in-out 1s filter 200ms ease-in-out;
+  height: 600px;
+}
+.main-photo:hover {
+  transform: scale(1.1);
+  filter: contrast(55%);
+  cursor: pointer;
+}
+.img2:hover {
+  transform: scale(1.2);
+}
+.img3:hover {
+  transform: scale(1.2);
+}
+.img4:hover {
+  transform: scale(1.2);
+}
+.img5:hover {
+  transform: scale(1.2);
+}
+.more-info {
+  color: #866d64;
+  font-family: "Playwrite AU SA", cursive;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.more-info:hover {
+  background-color: rgba(252, 251, 246, 0.5);
+  box-shadow: #866d64 0px 0px 10px 0px;
+  cursor: pointer;
+  
+}
+.more-info.dark {
+  color: #efe9d3;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.desing {
+  text-align: center;
+  margin: 50px 50px;
+  padding: 20px 20px;
+}
+.with-me {
+  font-family: "Playwrite AU SA", cursive;
+  font-size: 20px;
+  color: #772e25;
+  margin: 0 auto;
+  padding: 20px 20px;
+  text-align: center;
+}
+.with-me.dark {
+  color: #efe9d3;
+}
+
+.button-design {
+  color: #772e25;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  transition: ease-in-out 150ms;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.button-design:hover {
+  background-color: rgba(252, 251, 246, 0.5);
+  box-shadow: #866d64 0px 0px 10px 0px;
+  cursor: pointer;
+}
+.button-design.dark {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #efe9d3;
+  border: #efe9d3 1px solid;
+}
+.by {
+  font-family: "times new roman", sans-serif;
+  font-size: 18px;
+  color: #772e25;
+}
+.by.dark {
+  color: #a28d74;
+}
+.rights.dark {
+  font-family: "times new roman", sans-serif;
+  font-size: 16px;
+  color: #d1ccb8;
+}

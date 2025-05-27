@@ -17,7 +17,7 @@ function displayWeather(response) {
   let displayDescription = document.querySelector(".condition-description");
   displayDescription.innerHTML = `${description}`;
 
-  let weatherIcon = document.querySelector(".material-symbols-outlined");
+  let weatherIcon = document.querySelector(".material-symbols-outlined.main");
   let icon = "wb_sunny"; // default
 
   if (description.toLowerCase().includes("rain")) {
@@ -57,6 +57,14 @@ function searchCity(event) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function noWorking() {
+  // This function is called when the "About Me" section is clicked
+  alert("This section is not working yet. Cooming soon!");
+}
+
+let aboutMe = document.querySelector(".about-me");
+aboutMe.addEventListener("click", noWorking);
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
@@ -76,3 +84,14 @@ let week = [
 ];
 let day = week[now.getDay()];
 today.innerHTML = `${day} ${hour}:${mins < 10 ? "0" + mins : mins}`;
+
+const menuButton = document.getElementById("menu-button");
+const dropdown = menuButton.querySelector(".dropdown-menu");
+menuButton.addEventListener("click", function (e) {
+  e.stopPropagation();
+  dropdown.style.display =
+    dropdown.style.display === "block" ? "none" : "block";
+});
+document.addEventListener("click", function () {
+  dropdown.style.display = "none";
+});
