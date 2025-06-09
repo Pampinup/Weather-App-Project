@@ -173,12 +173,14 @@ strong {
   font-size: 14px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 7px;
 }
 .unit {
   font-size: 13px;
   display: block;
   margin: 0 auto;
   margin-left: 5px;
+  margin-top: 7px;
 }
 .forecast-icon {
   display: block;

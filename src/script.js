@@ -124,7 +124,7 @@ function displayForecast(response) {
 
 function noWorking() {
   // This function is called when the "About Me" section is clicked
-  alert("This section is not working yet. Cooming soon!");
+  alert("This section is not working yet. Coming soon!");
 }
 
 let aboutMe = document.querySelector(".about-me");
