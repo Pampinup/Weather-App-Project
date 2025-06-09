@@ -1,6 +1,9 @@
 // Weather API code:
 
 function displayWeather(response) {
+  let city = document.querySelector("#city");
+  city.innerHTML = response.data.city;
+
   let temperature = Math.round(response.data.temperature.current);
   let displayTemperature = document.querySelector(".current-temperature");
   displayTemperature.innerHTML = `${temperature}°C`;
@@ -18,10 +21,10 @@ function displayWeather(response) {
   displayDescription.innerHTML = `${description}`;
 
   let weatherIcon = document.querySelector(".material-symbols-outlined.main");
-  let icon = "wb_sunny"; // default
+  let icon = "wb_sunny";
 
   if (description.toLowerCase().includes("rain")) {
-    icon = "umbrella"; // Use a valid Material Symbols icon for rain
+    icon = "umbrella";
   } else if (description.toLowerCase().includes("cloud")) {
     icon = "cloud";
   } else if (
@@ -43,18 +46,80 @@ function displayWeather(response) {
   if (weatherIcon) {
     weatherIcon.innerHTML = icon;
   }
+
+  getForecast(response.data.city);
 }
 
 // Search city code:
 function searchCity(event) {
   event.preventDefault();
-  let addCity = document.querySelector("#add-city");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${addCity.value}`;
+  let city = document.querySelector("#add-city");
 
   let apiKey = "9ab043d0b59dfdb1606tfebb0401oaab";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${addCity.value}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city.value}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
+}
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKey = "9ab043d0b59dfdb1606tfebb0401oaab";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+// Helper function to map weather descriptions to Material Symbol icons
+function getWeatherIcon(description) {
+  let icon = "wb_sunny";
+  const desc = description.toLowerCase();
+  if (desc.includes("rain")) {
+    icon = "umbrella";
+  } else if (desc.includes("cloud")) {
+    icon = "cloud";
+  } else if (desc.includes("sunny") || desc.includes("clear")) {
+    icon = "wb_sunny";
+  } else if (desc.includes("snow")) {
+    icon = "mode_cool";
+  } else if (desc.includes("storm")) {
+    icon = "thunderstorm";
+  } else if (desc.includes("mist") || desc.includes("foggy")) {
+    icon = "foggy";
+  }
+  return icon;
+}
+
+function displayForecast(response) {
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
+      <div class="forecast-weather">
+       <div class="forecast-date">${formatDay(day.time)}</div>
+        <div class="material-symbols-outlined forecast-icon">
+         ${getWeatherIcon(day.condition.description)}
+        </div>
+        <div class="unit">
+          <span class="forecast-unit-max"><strong>${Math.round(
+            day.temperature.maximum
+          )}°C</strong></span>
+          <span class="forecast-unit-min">${Math.round(
+            day.temperature.minimum
+          )}°C</span>
+        </div>
+      </div>
+      `;
+    }
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 function noWorking() {
