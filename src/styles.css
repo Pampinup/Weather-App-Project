@@ -17,8 +17,10 @@ h1 {
   color: #772e25;
   font-family: "Playwrite AU SA";
   padding: 5px;
-  margin: 20px 10px;
+  margin: 20px 140px 20px 10px;
   font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 hr {
   color: rgba(140, 28, 19, 0.3);
@@ -26,9 +28,6 @@ hr {
   border-color: rgba(140, 28, 19, 0.1);
 }
 
-li {
-  list-style: none;
-}
 p.temperature-now {
   font-family: "Playwrite AU SA";
   font-weight: bold;
@@ -130,7 +129,7 @@ strong {
   display: block;
   border-radius: 10px;
   box-shadow: 1px 10px 10px rgba(167, 138, 127, 0.9);
-  text-align: justify;
+  /*text-align: justify;*/
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   background-blend-mode: overlay;
@@ -152,14 +151,36 @@ strong {
   font-size: 25px;
   padding: 5px;
 }
-.forecast-weather {
+.forecast {
   display: flex;
-  justify-content: space-between;
-  margin: 40px 10px 40px -30px;
-  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px auto;
+  padding: 0;
+  max-width: fit-content;
 }
 .forecast-weather {
+  display: inline-block;
+  justify-content: space-between;
+  padding: 0 2px;
+  margin: 40px 0px 40px 1px;
+  text-align: center;
   font-family: monospace;
-  font-size: 12px;
   color: #8a7269;
+}
+.forecast-date {
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+}
+.unit {
+  font-size: 13px;
+  display: block;
+  margin: 0 auto;
+  margin-left: 5px;
+}
+.forecast-icon {
+  display: block;
+  margin: 0 auto;
 }
