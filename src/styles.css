@@ -7,7 +7,7 @@
 body {
   display: block;
   margin: 0 auto;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/676/original/pascal-bullan-Z72zABXY50Y-unsplash.jpg?1744236201");
+  background-image: url("images/background.jpg");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: overlay;
