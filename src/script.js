@@ -107,10 +107,10 @@ function displayForecast(response) {
         </div>
         <div class="unit">
           <span class="forecast-unit-max"><strong>${Math.round(
-            day.temperature.maximum
+            day.temperature.maximum,
           )}°C</strong></span>
           <span class="forecast-unit-min">${Math.round(
-            day.temperature.minimum
+            day.temperature.minimum,
           )}°C</span>
         </div>
       </div>
@@ -121,14 +121,6 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-
-function noWorking() {
-  // This function is called when the "About Me" section is clicked
-  alert("This section is not working yet. Coming soon!");
-}
-
-let aboutMe = document.querySelector(".about-me");
-aboutMe.addEventListener("click", noWorking);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
@@ -150,13 +142,3 @@ let week = [
 let day = week[now.getDay()];
 today.innerHTML = `${day} ${hour}:${mins < 10 ? "0" + mins : mins}`;
 
-const menuButton = document.getElementById("menu-button");
-const dropdown = menuButton.querySelector(".dropdown-menu");
-menuButton.addEventListener("click", function (e) {
-  e.stopPropagation();
-  dropdown.style.display =
-    dropdown.style.display === "block" ? "none" : "block";
-});
-document.addEventListener("click", function () {
-  dropdown.style.display = "none";
-});
