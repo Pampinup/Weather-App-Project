@@ -75,15 +75,17 @@ p.current-date {
 }
 
 p.temperature-now {
-  position: relative;
-  top: -150px;
-  right: 10px;
-  display: flex;
-  justify-content: flex-end;
-  color: #772e25;
-  font-family: "Playwrite AU SA", cursive;
-  font-size: 27px;
+  font-family: "Playwrite AU SA";
   font-weight: bold;
+  font-size: 27px;
+  color: #772e25;
+}
+p.temperature-now {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  top: -140px;
+  right: 10px;
 }
 
 .material-symbols-outlined {

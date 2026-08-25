@@ -141,4 +141,3 @@ let week = [
 ];
 let day = week[now.getDay()];
 today.innerHTML = `${day} ${hour}:${mins < 10 ? "0" + mins : mins}`;
-
